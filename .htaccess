@@ -1,0 +1,4 @@
+ErrorDocument 404 /simfoni/404.php
+ErrorDocument 403 /simfoni/403.php
+php_value upload_max_filesize 900M
+php_value post_max_size 920M

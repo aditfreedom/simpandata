@@ -1,0 +1,81 @@
+body{
+	font-family: trebuchet ms ;
+	background-image: url('bg5.jpg');	
+	background-size: cover;
+}
+
+@font-face {
+	font-family: modern;
+	src: url(../fonts/Orbitron-Black.ttf);
+  }
+  
+h2{
+	color: rgb(255, 255, 255);
+	font-family: modern;
+	font-size: 30px;
+	text-align: left;
+}
+
+.tulisan_login{
+	text-align: center;
+	font-family: modern;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.kotak_login{
+	width: 340px;
+	height:380px;
+	background: white;
+	margin: 30px auto;
+	padding: 20px 20px;
+	border-radius : 10px;
+}
+
+label{
+	font-size: 11pt;
+}
+
+.form_login{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+
+.tombol_login{
+	background: #2aa7e2;
+	color: white;
+	font-size: 11pt;
+	font-weight: bold;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+
+.gambar{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35%;
+}
+
+.link{
+	background: #2aa7e2;
+	color: white;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+
+.alert{
+	background: #e44e4e;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #b32929;
+}

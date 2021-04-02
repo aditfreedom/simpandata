@@ -1,0 +1,120 @@
+/*
+2 css yang akan dibuat
+css spesifik untuk desktop dan css untuk mobile secara umum
+*/
+@font-face {
+	font-family: modern;
+	src: url(../fonts/EncodeSans-VariableFont_wdth\,wght.ttf);
+  }
+
+body{
+	font-family: modern;
+}
+#wrapper{
+	width: 100%;
+	background: #15232c;
+}
+.navbar{
+	margin-bottom: 0px;
+	height: 70px;
+}
+/*navbar atas*/
+.navbar-default{
+	background-color:#0BA5AF;
+	border-color:#0BA5AF ;
+}
+.navbar-default .navbar-brand{
+	color: #f4f4f4;
+	font-weight: bold;
+}
+
+
+.navbar-default .navbar-brand:hover{
+	color: #f4f4f4;
+}
+.navbar-default .navbar-brand:visited{
+	color: #f4f4f4;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #f4f4f4;
+}
+/*user pada navbar side*/
+.navbar-side .user{
+	padding: 20px;
+}
+.navbar-side .user img{
+	width: 40%;
+}
+.navbar-side .user h3{
+	color: #f4f4f4;
+	font-size: 18px;
+	font-weight: 600;
+}
+.navbar-side .user p{
+	color: #f2f2f2;
+	font-size: 12px;
+}
+.navbar-side{
+	background: #15232c;
+}
+.navbar-side ul li{
+	border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+}
+.navbar-side ul li a:hover{
+	color: #202020;
+}
+.navbar-side ul li a:focus{
+	color: #202020;
+}
+/*css untuk dropdown menu*/
+.navbar-side .tr-tree > .tr-tree-menu{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	display: none;
+	background: #203441;
+}
+.navbar-side .tr-tree > .tr-tree-menu li a{
+	padding: 10px;
+	display: block;
+	font-size: 13px;
+	margin-left: 10px;
+	background: #203441;
+}
+.navbar-side .tr-tree > .tr-tree-menu li a:hover{
+	background: #f4f4f4;
+	text-decoration: none;
+}
+.navbar-side .tr-tree > .tr-tree-menu li.active a{
+	background: #f9f9f9;
+	color: #222;
+	font-weight: bold;
+}
+.navbar-side ul li a{
+	color: #fff;
+}
+#page-wrapper{
+	padding: 15px;
+	background: #ffffff;
+}
+#page-inner{
+	background: #fff;
+	padding: 15px;
+}
+/*spesifik css ke desktop*/
+@media(min-width: 768px){
+	#page-wrapper{
+		margin: 0 0 0 260px;
+		padding: 15px;
+		min-height: 1000px;
+	}
+	#page-inner{
+		min-height: 800px;
+	}
+	.navbar-side{
+		width: 260px;
+		position: absolute;
+		z-index: 1;
+		min-height: 1000px;
+	}
+}

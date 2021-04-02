@@ -1,0 +1,38 @@
+.kotak-profil
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0 ,255, 0.2), 0 6px 20px 0 rgba(0, 0, 255, 0.19);
+	border-radius: 4px;
+	width: 80%;
+	height: 400px;
+	padding: 30px;
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+
+.img-profil
+{
+	margin-bottom: 20px;
+}
+
+
+.img-profil img
+{
+	width: 150px;
+	height: 150px;	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gambar-laporan img
+{
+	margin-right: auto;
+	margin-top: 20px;
+	margin-left: auto;
+}
+
+.info-detail, .data-detail
+{
+	margin-top: 15px;
+	padding: 20px;
+	font-size: 13px;
+}

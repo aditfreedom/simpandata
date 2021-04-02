@@ -1,0 +1,330 @@
+create table mapel1(
+id_mapel1 int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_mapel1 varchar(255) NOT NULL
+);
+
+create table mapel2(
+id_mapel2 int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_mapel2 varchar(255) NOT NULL
+);
+
+
+create table mapel3(
+id_mapel3 int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_mapel3 varchar(255) NOT NULL
+);
+
+create table mapel4(
+id_mapel4 int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_mapel4 varchar(255) NOT NULL
+);
+
+create table kelas(
+id_kelas int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_kelas varchar(255) NOT NULL
+);
+
+
+create table guru(
+id_guru int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_mapel int(11) NOT NULL,
+nama_guru varchar(255) NOT NULL
+);
+...
+create table minggu(
+id_minggu int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_minggu varchar(255) NOT NULL
+);
+
+
+create table bulan(
+id_bulan int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_bulan varchar(255) NOT NULL
+);
+
+create table jenjang(
+id_jenjang int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_jenjang varchar(255) NOT NULL
+);
+
+create table guest(
+id_guest int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jenjang varchar(255) NOT NULL,
+id_kelas varchar(255) NOT NULL,
+id_mapel1 varchar(255) NOT NULL,
+id_guru varchar(255) NOT NULL,
+tema_guest varchar(255) NOT NULL,
+nama_guest varchar(255) NOT NULL,
+hasil_guest varhar(255) NOT NULL,
+waktu_1 date NOT NULL,
+waktu_2 date NOT NULL, 
+hasil_guest text NOT NULL,
+biaya_guest varchar(255) NOT NULL,
+laporan varchar(255) NOT NULL
+);
+
+create table visit(
+id_visit int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jenjang varchar(255) NOT NULL,
+id_kelas varchar(255) NOT NULL,
+id_guru varchar(255) NOT NULL,
+tema_visit varchar(255) NOT NULL,
+hasil_visit varchar(255) NOT NULL,
+lokasi_visit varchar(255) NOT NULL,
+waktu_1 date NOT NULL,
+waktu_2 date NOT NULL, 
+id_mapel1 int(11)  NOT NULL,
+id_mapel2 int(11)  NOT NULL,
+id_mapel3 int(11)  NOT NULL,
+id_mapel4 int(11)  NOT NULL,
+biaya_visit varchar(255) NOT NULL,
+laporan varchar(255) NOT NULL
+);
+
+
+
+
+
+create table project(
+id_project int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jenjang int(11) NOT NULL,
+judul_project varchar(255) NOT NULL,
+id_mapel1 int(11)  NOT NULL,
+id_mapel2 int(11)  NOT NULL,
+id_mapel3 int(11)  NOT NULL,
+id_mapel4 int(11)  NOT NULL,
+hasil_akhir varchar(255) NOT NULL,
+biaya varchar(255) NOT NULL
+);
+
+
+create table admin(
+id_admin int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_admin varchar(255) NOT NULL,
+nip_admin varchar(255) NOT NULL,
+username_admin varchar(255) NOT NULL,
+password_admin varchar(255) NOT NULL
+);
+
+
+create table konselor(
+id_konselor int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_konselor varchar(255) NOT NULL,
+nip_konselor varchar(255) NOT NULL,
+username_konselor varchar(255) NOT NULL,
+password_konselor varchar(255) NOT NULL
+);
+
+create table manajemen(
+id_manajemen int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_manajemen varchar(255) NOT NULL,
+nip_manajemen varchar(255) NOT NULL,
+username_manajemen varchar(255) NOT NULL,
+password_manajemen varchar(255) NOT NULL
+);
+
+
+create table pengguna(
+id_user int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_user varchar(255) NOT NULL,
+nip_user varchar(255) NOT NULL,
+level_user varchar(255) NOT NULL,
+username_user varchar(255) NOT NULL,
+password_user varchar(255) NOT NULL
+);
+
+
+create table siswa(
+id_siswa int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jenjang varchar(255) NOT NULL,
+id_kelas varchar(255) NOT NULL,
+nis_siswa varchar(255) NOT NULL,
+nama_siswa varchar(255) NOT NULL,
+alamat_siswa varchar(255) NOT NULL,
+ayah_siswa varchar(255) NOT NULL,
+ibu_siswa varchar(255) NOT NULL,
+hp_siswa varchar(255) NOT NULL,
+kerja_siswa varchar(255) NOT NULL
+);
+
+
+create table visit_home(
+id_visit_home int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jenjang varchar(255) NOT NULL,
+id_semester varchar(255) NOT NULL,
+id_kelas varchar(255) NOT NULL,
+id_guru varchar(255) NOT NULL,
+id_siswa varchar(255) NOT NULL,
+ortu varchar(255) NOT NULL, date NOT NULL,
+waktu_1 date NOT NULL,
+tujuan_visit_home varchar(255) NOT NULL,
+hasil_visit_home varchar(255) NOT NULL,
+lanjutan_visit_home varchar(255) NOT NULL,
+laporan varchar(255) NOT NULL
+);
+
+create table kegiatan(
+id_kegiatan int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jenjang varchar(255) NOT NULL,
+id_semester varchar(255) NOT NULL,
+nama varchar(255) NOT NULL,
+topik varchar(255) NOT NULL,
+bentuk varchar(255) NOT NULL,
+waktu_1 date NOT NULL,
+waktu_2 date NOT NULL,
+biaya varchar(255) NOT NULL,
+laporan varchar(255) NOT NULL
+);
+
+create table mitra(
+id_mitra int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+jenjang varchar(255) NOT NULL,
+bidang varchar(255) NOT NULL,
+nama_mitra varchar(255) NOT NULL,
+bentuk varchar(255) NOT NULL,
+waktu_1 date NOT NULL,
+waktu_2 date NOT NULL,
+laporan varchar(255) NOT NULL
+);
+
+
+
+
+
+create table peminjaman(
+id_peminjaman int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_ruang varchar(255) NOT NULL,
+id_status varchar(255) NOT NULL,
+id_status_final varchar(255) NOT NULL,
+id_jenjang varchar(255) NOT NULL,
+id_guru varchar(255) NOT NULL,
+waktu_1 date NOT NULL,
+jam varchar(255) NOT NULL,
+keperluan varchar(255) NOT NULL,
+keterangan varchar(255) NOT NULL
+);
+
+create table ruang(
+id_ruang int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_ruang varchar(255) NOT NULL
+);
+
+create table status(
+id_status int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_status varchar(255) NOT NULL
+);
+
+create table status_final(
+id_status_final int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_status varchar(255) NOT NULL
+);
+
+
+create table pjruangan(
+id_pjruangan int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_pjruangan varchar(255) NOT NULL,
+nip_pjruangan varchar(255) NOT NULL,
+username_pjruangan varchar(255) NOT NULL,
+password_pjruangan varchar(255) NOT NULL
+);
+
+
+
+
+create table hari(
+id_hari int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+hari varchar(255) NOT NULL
+);
+
+
+
+create table jadwal(
+id_jadwal int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jenjang varchar(255) NOT NULL,
+id_hari varchar(255) NOT NULL,
+id_jam varchar(255) NOT NULL,
+id_ruang varchar(255) NOT NULL,
+keperluan varchar(255) NOT NULL
+);
+
+
+
+create table pustaka(
+id_pustaka int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_pustaka varchar(255) NOT NULL,
+nip_pustaka varchar(255) NOT NULL,
+username_pustaka varchar(255) NOT NULL,
+password_pustaka varchar(255) NOT NULL
+);
+
+create table datapustaka(
+id_datapustaka int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_semester varchar(255) NOT NULL,
+id_jenjang varchar(255) NOT NULL,
+kegiatan varchar(255) NOT NULL,
+waktu_1 date NOT NULL,
+waktu_2 date NOT NULL,
+tujuan varchar(255) NOT NULL,
+sasaran varchar(255) NOT NULL,
+biaya varchar(255) NOT NULL,
+laporan varchar(255) NOT NULL
+);
+
+
+create table waka(
+id_waka int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_waka varchar(255) NOT NULL,
+nip_waka varchar(255) NOT NULL,
+username_waka varchar(255) NOT NULL,
+password_waka varchar(255) NOT NULL
+);
+
+
+create table jurusan(
+id_jurusan int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_jurusan varchar(255) NOT NULL
+);
+
+create table tp (
+id_tp int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_tp varchar(255) NOT NULL
+);
+
+create table jk (
+id_jk int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_jk varchar(255) NOT NULL
+);
+
+create table statuspt (
+id_statuspt int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nama_statuspt varchar(255) NOT NULL
+);
+
+
+create table lulusan(
+id_lulusan int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jurusan int(11) NOT NULL,
+id_tp int(11) NOT NULL,
+id_jk int(11) NOT NULL,
+id_statuspt int(11) NOT NULL,
+nama_siswa varchar(255) NOT NULL,
+nama_kampus varchar(255) NOT NULL,
+Jalur_kampus varchar(255) NOT NULL,
+jurusan_kampus varchar(255) NOT NULL,
+ket_lulus varchar(255) NOT NULL
+);
+
+create table lomba(
+id_lomba int(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_jenjang int(11) NOT NULL,
+id_tp int(11) NOT NULL,
+id_jk int(11) NOT NULL,
+nama_siswa varchar(255) NOT NULL,
+lokasi_lomba varchar(255) NOT NULL,
+nama_lomba varchar(255) NOT NULL,
+tahun_lomba varchar(255) NOT NULL,
+penyelenggara_lomba varchar(255) NOT NULL,
+hasil_lomba varchar(255) NOT NULL
+);
+
+
