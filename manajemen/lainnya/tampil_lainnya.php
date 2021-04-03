@@ -43,7 +43,7 @@ $semua_project = $project->tampil_lainnya();
 			<td><?php echo $value['jenis']; ?></td>
 			<td><?php echo $value['no_kartu']; ?></td>
 			<td class="hidden-print"><?php echo $value['laporan'] ?></td>
-			<td><a href="../video/<?php echo $value['laporan']; ?>" class="btn btn-danger">Lihat Video</a></td>	
+			<td><a href="../video/<?php echo $value['laporan']; ?>" class="btn btn-danger" target="_blank">Lihat Video</a></td>	
 		</tr>
 		<?php endforeach ?>	
 			</tbody>

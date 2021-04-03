@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">   
 </head>
 <br>
+<div id="alert"></div>
 <h2 class="text-center font-weight-bold">FORM PENGIRIMAN VIDEO PROFIL</h2>
 <h2 class="text-center font-weight-bold">PPDB SEKOLAH SUKMA BANGSA BIREUEN</h2>
 <h2 class="text-center font-weight-bold">TP. 2021/2022</h2>
@@ -38,13 +39,15 @@
 				<input type="file" name="laporan" class="form-control" >
 			</div>
 			
-			<button class="btn btn-info" name="simpan" style="width:100%;"><b>Simpan</b></button>
+			<button class="btn btn-info" name="simpan" style="width:100%;" onclick="tampilalert()"><b>Kirim Video</b></button>
 
 		</form>
+<br>
 
 		<?php 
 			if (isset($_POST['simpan']))
 			{
+
 				$nama = $_FILES['laporan']['name'];
 				$lokasi = $_FILES['laporan']['tmp_name'];
 				$extension = pathinfo($nama, PATHINFO_EXTENSION);
@@ -56,7 +59,7 @@
 
 
 
-				echo "<script>alert('Berhasil Tersimpan')</script>";
+				echo "<script>alert('Video Berhasil Terkirim, Selamat Mengikuti Tes!')</script>";
 				echo "<script>location='index.php?halaman=tambah_lainnya'</script>";
 
 				
@@ -65,3 +68,13 @@
 		?>
 
 </div>
+
+<script>
+
+function tampilalert() {
+	document.getElementById("alert").innerHTML = '<div class="alert alert-danger" role="alert">File Sedang Dikirim, Harap Tunggu Sejenak</div>';
+}
+
+  
+
+</script>
